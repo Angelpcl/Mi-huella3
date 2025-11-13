@@ -1,0 +1,78 @@
+{
+  "expo": {
+    "name": "Mi Huella",
+    "slug": "mi-huella",
+    "version": "2.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ],
+        "UIUserNotificationSettings": {
+          "types": [
+            "alert",
+            "badge",
+            "sound"
+          ]
+        }
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "usesCleartextTraffic": true,
+      "permissions": [
+        "INTERNET",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "NOTIFICATIONS",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_BACKGROUND_LOCATION",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_LOCATION",
+        "CAMERA"
+      ],
+      "useNextNotificationsApi": true,
+      "package": "com.pets.mihuella"
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "plugins": [
+      "expo-notifications",
+      [
+        "expo-location",
+        {
+          "isAndroidBackgroundLocationEnabled": true,
+          "locationAlwaysAndWhenInUsePermission": "Permitir que MiProyectoHuella acceda siempre a tu ubicación.",
+          "locationWhenInUsePermission": "Permitir que MiProyectoHuella acceda a tu ubicación cuando uses la app."
+        }
+      ],
+      "expo-background-task",
+      "expo-camera"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "416cd52e-6936-452a-853b-f90d2fc1bffb"
+      }
+    },
+    "owner": "hugo.n"
+  }
+}
